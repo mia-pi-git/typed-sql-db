@@ -1,11 +1,13 @@
 **typed-sql-db**
+
 This is meant to be a wrapper around any SQL database (mysql, sqlite, PostgreSQL, etc).
 It's easy to type and use, and agnostic to any SQL driver you want to use.
 
-***Usage***
+**Usage**
 
 The main constructor is DatabaseTable, exported both as a named class and a default.
-All you need to pass it is the table name, the primary key of the table, and a query function.
+All you need to pass it is the table name, the primary key of the table, and a query function. The query function passes a `SQLStatement` object in order to ensure sanitization. 
+Optionally, you can pass an options object. For now, the only param this takes is `mysql`, which tells the class it's a mysql db. The benefit of this is that it will sanitize parameters accordingly (using the \`param\` syntax that MySQL prefers.)
 
 For example:
 
