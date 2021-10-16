@@ -1,0 +1,10 @@
+{
+    "name": "typed-sql-db",
+    "version": "0.1.0", 
+    "dependencies": {
+        "sql-template-strings": "^2.2.2",
+        "typescript": "^4.4.4"
+    },
+    "desc": "A strictly typed and easy to use database abstraction.",
+    "main": ".dist/"
+}
